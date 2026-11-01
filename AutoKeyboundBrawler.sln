@@ -1,0 +1,22 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoKeyboundBrawler", "AutoKeyboundBrawler\AutoKeyboundBrawler.csproj", "{27F45780-AF1E-4552-975E-5998347FC0A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommons", "ECommons\ECommons\ECommons.csproj", "{726239FB-B6EB-4B25-9540-C510E19FDEED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27F45780-AF1E-4552-975E-5998347FC0A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F45780-AF1E-4552-975E-5998347FC0A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F45780-AF1E-4552-975E-5998347FC0A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F45780-AF1E-4552-975E-5998347FC0A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{726239FB-B6EB-4B25-9540-C510E19FDEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{726239FB-B6EB-4B25-9540-C510E19FDEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{726239FB-B6EB-4B25-9540-C510E19FDEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{726239FB-B6EB-4B25-9540-C510E19FDEED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

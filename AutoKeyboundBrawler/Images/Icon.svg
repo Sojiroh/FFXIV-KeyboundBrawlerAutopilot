@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
+      <stop offset="0" stop-color="#4a2a7a"/>
+      <stop offset="0.55" stop-color="#26154a"/>
+      <stop offset="1" stop-color="#110a24"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9cf0"/>
+      <stop offset="1" stop-color="#8a5cff"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e2d8fb"/>
+    </linearGradient>
+    <linearGradient id="capSide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9a4ee"/>
+      <stop offset="1" stop-color="#6c50c4"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd978"/>
+      <stop offset="1" stop-color="#e09a2b"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <!-- autopilot dial -->
+  <g transform="translate(256 268)">
+    <circle r="178" fill="none" stroke="#ff9cf0" stroke-opacity="0.12" stroke-width="30"/>
+    <circle r="178" fill="none" stroke="url(#ring)" stroke-width="10" filter="url(#glow)"/>
+    <g stroke="#f2c8ff" stroke-linecap="round">
+      <line y1="-150" y2="-132" stroke-width="7" transform="rotate(0)"/>
+      <line y1="-150" y2="-138" stroke-width="5" transform="rotate(30)"/>
+      <line y1="-150" y2="-138" stroke-width="5" transform="rotate(60)"/>
+      <line y1="-150" y2="-132" stroke-width="7" transform="rotate(90)"/>
+      <line y1="-150" y2="-138" stroke-width="5" transform="rotate(120)"/>
+      <line y1="-150" y2="-138" stroke-width="5" transform="rotate(150)"/>
+      <line y1="-150" y2="-132" stroke-width="7" transform="rotate(180)"/>
+      <line y1="-150" y2="-138" stroke-width="5" transform="rotate(210)"/>
+      <line y1="-150" y2="-138" stroke-width="5" transform="rotate(240)"/>
+      <line y1="-150" y2="-132" stroke-width="7" transform="rotate(270)"/>
+      <line y1="-150" y2="-138" stroke-width="5" transform="rotate(300)"/>
+      <line y1="-150" y2="-138" stroke-width="5" transform="rotate(330)"/>
+    </g>
+  </g>
+
+  <!-- heading chevron above the dial -->
+  <path d="M256 34 L300 104 L256 86 L212 104 Z" fill="url(#gold)" filter="url(#glow)"/>
+
+  <!-- keycap -->
+  <g filter="url(#glow)">
+    <rect x="164" y="186" width="184" height="184" rx="34" fill="url(#capSide)"/>
+    <rect x="180" y="192" width="152" height="148" rx="26" fill="url(#cap)"/>
+  </g>
+
+  <!-- strike bolt on the key -->
+  <path d="M270 210 L220 276 L250 276 L238 324 L294 254 L263 254 L280 210 Z" fill="url(#gold)" stroke="#a8641a" stroke-width="3" stroke-linejoin="round"/>
+</svg>

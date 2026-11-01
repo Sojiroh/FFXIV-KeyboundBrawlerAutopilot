@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0sbLhzYl0OY=",
+  "success": true,
+  "projectFilePath": "/home/sojiroh/Proyectos/AutoKeyboundBrawler/ECommons/ECommons/ECommons.csproj",
+  "expectedPackageFiles": [
+    "/home/sojiroh/.nuget/packages/microsoft.codeanalysis.bannedapianalyzers/3.12.0-beta1.25218.8/microsoft.codeanalysis.bannedapianalyzers.3.12.0-beta1.25218.8.nupkg.sha512"
+  ],
+  "logs": []
+}

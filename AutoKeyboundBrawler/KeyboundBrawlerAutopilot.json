@@ -1,0 +1,16 @@
+{
+  "Author": "Sojiroh",
+  "Name": "Keybound Brawler Autopilot",
+  "InternalName": "KeyboundBrawlerAutopilot",
+  "Punchline": "Keybound Brawler, typed for you.",
+  "Description": "Plays Keybound Brawler's typing for you: reads the phrases above the enemies, sends the most urgent one in after as long as typing it would take, or types it into the input bar, with adjustable speed and a humanizer. Based on Auto Keybound Brawler by XeldarAlz.",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/Sojiroh/FFXIV-KeyboundBrawlerAutopilot",
+  "IconUrl": "https://raw.githubusercontent.com/Sojiroh/FFXIV-KeyboundBrawlerAutopilot/master/AutoKeyboundBrawler/Images/Icon.png",
+  "Tags": [
+    "Keybound Brawler",
+    "Gold Saucer",
+    "Typing",
+    "Automation"
+  ]
+}

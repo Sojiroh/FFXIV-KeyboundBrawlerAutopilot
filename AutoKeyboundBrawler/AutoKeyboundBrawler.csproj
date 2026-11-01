@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <!-- Version, Authors, License, RepoUrl all inherited from ../Directory.Build.props -->
+    <!-- AssemblyName is the Dalamud InternalName; the packager reads KeyboundBrawlerAutopilot.json as the manifest. -->
+    <AssemblyName>KeyboundBrawlerAutopilot</AssemblyName>
+    <RootNamespace>AutoKeyboundBrawler</RootNamespace>
+    <LangVersion>preview</LangVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Icon.png" Condition="Exists('Images\Icon.png')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Localization\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\*.ttf;Fonts\*.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Glasswork.Dalamud" Version="0.1.0-beta.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ECommons\ECommons\ECommons.csproj">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

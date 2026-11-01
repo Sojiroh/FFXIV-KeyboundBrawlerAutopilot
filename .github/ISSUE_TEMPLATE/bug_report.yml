@@ -1,0 +1,109 @@
+name: Bug report
+description: Something's broken or behaving unexpectedly.
+title: "[Bug] "
+labels: ["bug"]
+assignees: ["Sojiroh"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please fill out as much as you can; it makes a huge difference.
+
+        If you're not sure whether it's a bug or expected behavior, prefer [Help & troubleshooting discussions](https://github.com/Sojiroh/FFXIV-KeyboundBrawlerAutopilot/discussions/new?category=help-troubleshooting); triage is faster there.
+
+        For security issues, please use [private vulnerability reporting](https://github.com/Sojiroh/FFXIV-KeyboundBrawlerAutopilot/security/advisories/new) instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see? What did you expect to see instead?
+      placeholder: "A phrase stayed on screen and was never sent / typing stopped mid-wave / Letterlock locked my keys / auto queue never registered..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to trigger the bug. If it's intermittent, say so.
+      placeholder: |
+        1. Open `/kba`
+        2. Pick an input method and typing speed
+        3. Press Start and queue at the Keybound Registrar
+        4. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      description: Shown in `/xlplugins` next to "Keybound Brawler Autopilot".
+      options:
+        - 1.5.2.0
+        - Older / not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: input-method
+    attributes:
+      label: Input method
+      description: Settings, Typing.
+      options:
+        - Submit directly (default)
+        - Type keys
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: client-language
+    attributes:
+      label: Game client language
+      description: Phrases are read and typed as your client shows them, so the client language matters.
+      placeholder: "English, Japanese, German, French, ..."
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Where did it fail?
+      description: Each wave the plugin reads the phrases on screen, picks a target, types or submits it, and repeats; auto queue then closes the results and registers for the next match.
+      options:
+        - Reading phrases (missed or misread a phrase)
+        - Typing / submitting (wrong word, stalled, text went somewhere else)
+        - Special attacks (Barrier Buster, casting enemies, Letterlock / Cursed Gaze)
+        - Target priority (went for the wrong phrase)
+        - Auto queue (results, walking to the registrar, registering, accepting)
+        - Humanizer / typing speed
+        - Selection / UI (window, settings, themes, languages)
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: |
+        **If you can provide any of these, it turns guesswork into a fix.**
+
+        - **Plugin console**: open `/kba log`, press *Copy log* and paste the result into the console field below. It already includes the plugin version, Dalamud version and zone.
+        - **Dalamud log**: open `/xllog`, click the *Open log folder* button at the bottom-right, attach `dalamud.log`. Filter by `[KBA]` if you want to trim it down.
+        - **Screenshots / short clip** if the issue is visual.
+        - **Other plugins active** that touch chat, text input, key presses or the Gold Saucer — helps rule out conflicts.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output (optional)
+      description: |
+        Paste what *Copy log* on the plugin's Console page (`/kba log`) put on your clipboard. Short snippets (chat-log tail, Dalamud error text) also belong here; attach full `dalamud.log` files under **Attachments** above.
+      render: text
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Typing speed, humanizer settings, target priority, hunches, anything that helps the bug land.
